@@ -20,7 +20,7 @@ module.exports = env => ({
     aggregateTimeout: 100
   },
 
-  devtool: env.dev ? 'inline-source-map' : false,
+  devtool: env.dev ? 'source-map' : false,
 
   resolve: {
     modules: [join(__dirname, '.'), join(__dirname, 'src')]
