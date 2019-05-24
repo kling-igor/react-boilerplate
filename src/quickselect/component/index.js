@@ -71,7 +71,7 @@ export class QuickSelect extends React.Component {
           className={Classes.DIALOG_BODY}
           style={{
             width: 500,
-            height: 66 // 72
+            height: 64 //  /* если выбор из списка, то маленькая (32), если ручной ввод и требуется подсказка, то большая 64 */
           }}
         >
           <Suggest
@@ -85,7 +85,7 @@ export class QuickSelect extends React.Component {
             resetOnQuery={true}
             resetOnSelect={false}
             inputValueRenderer={this.renderInputValue}
-            noResults={<MenuItem disabled={true} text="No result..." />}
+            // noResults={<div style={{ height: 0 }} /> /*<MenuItem disabled={true} text="No result..." />*/}
             onItemSelect={this.handleValueChange}
             usePortal={false}
             popoverProps={{
